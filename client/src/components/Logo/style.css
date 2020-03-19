@@ -1,0 +1,14 @@
+.container-logo h1, .container-logo i {
+    font-size: 100px;
+    display: inline;
+    color: #ebebeb;
+    text-transform: uppercase;
+    
+}
+.container-logo h1 {
+    padding: 7px;
+    line-height: 30px;
+}
+.container-logo{
+    text-align: center
+}
