@@ -1,0 +1,61 @@
+.list-groups {
+    height: 585px;
+    overflow-y: auto;
+}
+
+.scroll::-webkit-scrollbar {
+    width:5px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #bfbfc0;
+    transition: background 5s
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #d3d3d3;
+    transition: background 5s
+}
+
+.list-groups ul {
+    padding: 10px;
+}
+
+.list-groups ul li {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    align-items: center;
+}
+
+ul li .btn-group {
+    display: inline-block;
+    text-align: left;
+    height: 60px;
+    border: none;
+    background: transparent;
+    border-bottom: .5px solid #c7c5c5;
+    transition: background .2s;
+    font-weight: inherit;
+    font-size: 18px;
+}
+
+ul li .btn-group:hover {
+    background: var(--cinza-claro);
+    transition: background .2s;
+    cursor: pointer;
+}
+
+ul li .btn-group:active {
+    border: none;
+    outline: none;
+    background: #c7c7c7;
+    font-weight: bold;
+}
+
+ul li .btn-group:focus-within {
+    outline: none;
+}

@@ -16,7 +16,7 @@ form p {
     margin-bottom: 20px;
 }
 
-form a {
+form span {
     display: block;
     text-align: center;
     font-size: 18px;
@@ -24,8 +24,9 @@ form a {
     text-decoration: none
 }
 
-form a:hover {
+form span:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 form .inputs {
@@ -47,7 +48,7 @@ form .btn-form {
     width: 150px;
     height: 40px;
     text-transform: uppercase;
-    background-color: var(--verde-escuro);
+    background-color: var(--cinza-escuro);
     border: none;
     border-radius: 2px;
     box-shadow: 1px 1px 2px black;
@@ -59,7 +60,7 @@ form .btn-form {
 }
 
 form .btn-form:hover {
-    background-color: var(--cinza-escuro);
+    background-color: var(--cinza-mais-escuro);
     cursor: pointer;
     border: none;
     transition: background-color .2s

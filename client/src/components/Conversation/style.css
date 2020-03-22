@@ -1,0 +1,6 @@
+.container-conversation{
+    height: 510px;
+    background: #e4ddd7;
+    padding: 10px 20px;
+    overflow-y: auto;
+}

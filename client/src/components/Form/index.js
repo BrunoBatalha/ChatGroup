@@ -1,12 +1,36 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import { faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 import Input from '../Input';
 import './style.css';
 
 export default function Form() {
+    const history = useHistory();
+    
+    function openSignIn() {
+        const fSignIn = document.getElementById('form-sign-in');
+        const fSignUp = document.getElementById('form-sign-up');
+        document.title = 'Bem vindo';
+        changeFormDisplay(fSignIn, fSignUp);
+    }
+    function openSignUp() {
+        const fSignIn = document.getElementById('form-sign-in');
+        const fSignUp = document.getElementById('form-sign-up');
+        changeFormDisplay(fSignUp, fSignIn);
+    }
+    function changeFormDisplay(show, hide) {
+        show.style.display = 'block';
+        hide.style.display = 'none';
+    }
+
+    function handleSubmit(e){
+        e.preventDefault();
+        history.push('/chat');
+    }
+
     return (
         <>
-            <form id='form-sign-in'>
+            <form id='form-sign-in' onSubmit={handleSubmit}>
                 <div className='inputs'>
                     <p>Entrar</p>
                     <Input
@@ -14,7 +38,7 @@ export default function Form() {
                         label='Nome de usuário'
                         name='username'
                         type='text'
-                        placeholder='Ex... : Maria123, JoãoMarinheiro e etc' />
+                        placeholder='Ex... : Bruno09' />
                     <Input
                         icon={faKey}
                         label='Senha'
@@ -23,7 +47,7 @@ export default function Form() {
                         placeholder='No minímo 6 caracteres' />
                     <input type="checkbox" id='chk-pass-sign-in' />Mostrar senha
                     <button type="submit" className='btn-form'>Entrar</button>
-                    <a href="#" onClick={openSignUp}>Cadastrar-se</a>
+                    <span onClick={openSignUp}>Cadastrar-se</span>
                 </div>
             </form>
             <form id='form-sign-up' style={{ display: 'none' }}>
@@ -34,7 +58,7 @@ export default function Form() {
                         label='Nome de usuário'
                         name='username'
                         type='text'
-                        placeholder='Ex... : Maria123, JoãoMarinheiro e etc' />
+                        placeholder='Ex... : Bruno09' />
                     <Input
                         icon={faKey}
                         label='Senha'
@@ -49,33 +73,22 @@ export default function Form() {
                         placeholder='No minímo 6 caracteres' />
                     <input type="checkbox" id='chk-pass-sign-up' />Mostrar senha
                     <button type="submit" className='btn-form'>Cadastrar-se</button>
-                    <a href="#" onClick={openSignIn}>Entrar</a>
+                    <span onClick={openSignIn}>Entrar</span>
                 </div>
             </form>
         </>
     )
-    function openSignIn() {
-        const fSignIn = document.getElementById('form-sign-in');
-        const fSignUp = document.getElementById('form-sign-up');
-        changeFormDisplay(fSignIn, fSignUp);
-    }
-    function openSignUp() {
-        const fSignIn = document.getElementById('form-sign-in');
-        const fSignUp = document.getElementById('form-sign-up');
-        changeFormDisplay(fSignUp, fSignIn);
-    }
-    function changeFormDisplay(show, hide) {
-        show.style.display = 'block';
-        hide.style.display = 'none';
-    }
+
 }
 
 window.onload = () => {
     const chkSignUp = document.getElementById('chk-pass-sign-up');
     const chkSignIn = document.getElementById('chk-pass-sign-in');
 
-    chkSignIn.onchange = handleVisibilityPwd;
-    chkSignUp.onchange = handleVisibilityPwd;
+    if (chkSignUp && chkSignIn) {
+        chkSignIn.onchange = handleVisibilityPwd;
+        chkSignUp.onchange = handleVisibilityPwd;
+    }
 
     function handleVisibilityPwd(e) {
         const queryPwd = document.querySelectorAll('input[name="password"]');
