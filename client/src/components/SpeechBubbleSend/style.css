@@ -1,0 +1,29 @@
+.row-send{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.bubble-send{
+    display: inline-block;
+    max-width: 60%;
+    background: #e6bdca;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    position: relative;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.bubble-send::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -10px;
+    bottom: 0px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 15px solid #e6bdca
+}

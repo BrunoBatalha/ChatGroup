@@ -1,13 +1,13 @@
 .container-general {
     display: grid;
-    grid-template-columns: 350px 1010px;
-    overflow-y: hidden;
+    grid-template-columns: 25% 75%;
+    height: 100%;
 }
 
 .container-general .container-dashboard {
     background-color: #fff;
-    height: 100vh;
-    width: 350px;
+    height: 100%;
+    min-width: 305px;
 }
 
 .container-dashboard .profile {
@@ -15,33 +15,21 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 10px;
     background-color: #eeeeee;
 }
 
-.img-round {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
 .container-dashboard .profile .datas {
-    font-size: 15px;
+    font-size: 1rem;
     margin: 5px;
 }
 
-
-
-.container-general .container-chat .container-input {
-    position: fixed;
-    bottom: 0px;
-    width: 100vw;
-    height: 80px;
-    background-color: #eeedeb;
+.container-dashboard .profile .btn-add-group {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #646464
 }
 
 .container-chat .info-group {
@@ -55,15 +43,20 @@
     border: .5px solid #c7c5c5
 }
 
-.container-chat .info-group .text-group{
+.container-chat .info-group .text-group {
     padding: 0px 15px;
 }
 
 .container-chat .container-input {
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0 10px;
+    bottom: 0px;
+    height: 85px;
+    width: 100%;
+    background-color: #eeedeb;
 }
 
 .container-chat .container-input i {
@@ -86,7 +79,7 @@
     color: var(--cinza-escuro);
     height: 50px;
     font-size: 18px;
-    width: 850px;
+    width: 65%;
     padding: 0px 10px;
     border: none;
     border-radius: 5px;
@@ -94,4 +87,73 @@
 
 .container-chat .container-input input:focus {
     outline: none;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background: #9b9a98;
+    margin: 3px
+}
+
+.toggle-groups {
+    display: none;
+    background: transparent;
+    border: none
+}
+
+.toggle-groups:hover {
+    cursor: pointer;
+}
+
+.logo-list {
+    display: flex;
+    flex-direction: collumn;
+    justify-content: center;
+    line-height: 1.2rem;
+    margin-top: 20px;
+    color: #cecece
+}
+
+.logo-list i {
+    display: flex;
+    flex-direction: collumn;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.img-round {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 1255px) {
+    .container-general {
+        display: block;
+    }
+    .container-general .container-dashboard {
+        height: 50px;
+    }
+    .toggle-groups {
+        display: block;
+    }
+    .logo-list {
+        display: none;
+    }
+    .info-group {
+        padding: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+    .profile {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
 }

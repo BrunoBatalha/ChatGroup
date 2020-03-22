@@ -27,3 +27,40 @@ body, #root {
 html{
     font-size: 100%;
 }
+
+
+.scroll::-webkit-scrollbar {
+    width:5px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #bfbfc0;
+    transition: background 5s
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #d3d3d3;
+    transition: background 5s
+}
+
+.d-block{
+    display: block;
+}
+.closeScroll{
+    overflow: hidden;
+}
+
+
+@keyframes forDown {
+    from{
+        height: 0;
+    }
+    to{
+        height: 100vh;
+    }
+}
+

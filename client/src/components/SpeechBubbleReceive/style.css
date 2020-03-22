@@ -1,6 +1,11 @@
+.row-send{
+    display: flex;
+    flex-direction: row;
+}
+
 .bubble{
     display: inline-block;
-    max-width: 500px;
+    max-width: 60%;
     background: #fff;
     padding: 10px;
     font-size: 15px;

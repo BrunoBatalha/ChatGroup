@@ -7,8 +7,10 @@ export default function Chat({ list }) {
             <ul>
                 {list.map((element, i) => (
                     <li key={i}>
-                        <div className='img-round'>
-                            <img src={perfil} alt='foto_perfil' width='40px' height='40px' />
+                        <div className='container-img'>
+                            <div className='img-round'>
+                                <img src={perfil} alt='foto_perfil' width='40px' height='40px' />
+                            </div>
                         </div>
                         <button className='btn-group'>{element.nome}</button>
                     </li>

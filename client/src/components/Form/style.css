@@ -83,7 +83,7 @@ form .btn-form:hover {
     }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 360px) {
     form .inputs{
         padding-left: 0;
         padding-right: 0;
