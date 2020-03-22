@@ -1,9 +1,32 @@
+.container-main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .container-index {
     display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 80px auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    margin: auto auto auto auto;
 }
 
 .container-index>div {
     margin-top: 100px;
+}
+
+@media (max-width: 835px) {
+    .container-index {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+    }
+    .container-index>div {
+        margin: 10px auto;
+    }
+    .container-index>main>form {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
 }

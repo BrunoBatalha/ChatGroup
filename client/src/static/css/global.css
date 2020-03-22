@@ -18,8 +18,12 @@
 }
 
 body, #root {
-    min-height: 100%;
+    height: 100vh;
+    width: 100vw;
     background: #C04848;
     background: linear-gradient(to right, var(--roxo), var(--vermelho));
-    overflow: hidden;
+}
+
+html{
+    font-size: 100%;
 }

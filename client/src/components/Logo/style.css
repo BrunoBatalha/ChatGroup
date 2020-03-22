@@ -1,14 +1,26 @@
 .container-logo h1, .container-logo i {
-    font-size: 100px;
+    font-size: 7rem;
     display: inline;
     color: #ebebeb;
     text-transform: uppercase;
-    
 }
+
 .container-logo h1 {
     padding: 7px;
     line-height: 30px;
 }
-.container-logo{
+
+.container-logo {
     text-align: center
+}
+
+@media (max-width: 955px) {
+    .container-logo h1, .container-logo i {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 330px) {
+    .container-logo h1, .container-logo i {
+        font-size: 4rem;
+    }
 }

@@ -1,16 +1,16 @@
 form {
-    width: 420px;
+    width: 75%;
     display: block;
     margin: 0px 200px 0px 10px;
     background-color: #fff;
     box-shadow: 1px 1px 15px black;
     color: var(--cinza-escuro);
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 form p {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 2rem;
     text-align: center;
     letter-spacing: 2px;
     margin-bottom: 20px;
@@ -19,7 +19,7 @@ form p {
 form span {
     display: block;
     text-align: center;
-    font-size: 18px;
+    font-size: 1rem;
     color: #363636;
     text-decoration: none
 }
@@ -38,7 +38,8 @@ form .input-block~.input-block {
     margin-top: 40px;
     margin-bottom: 40px;
 }
-form input[type=checkbox]{
+
+form input[type=checkbox] {
     margin-bottom: 30px;
     margin-right: 5px;
 }
@@ -46,13 +47,13 @@ form input[type=checkbox]{
 form .btn-form {
     color: #fff;
     width: 150px;
-    height: 40px;
+    height: 2.4rem;
     text-transform: uppercase;
     background-color: var(--cinza-escuro);
     border: none;
     border-radius: 2px;
     box-shadow: 1px 1px 2px black;
-    font-size: 15px;
+    font-size: 1rem;
     text-align: center;
     display: block;
     margin: 0px auto 20px auto;
@@ -64,4 +65,27 @@ form .btn-form:hover {
     cursor: pointer;
     border: none;
     transition: background-color .2s
+}
+
+@media (min-width: 1500px) {
+    form .inputs{
+        font-size: 1.9rem;
+    }
+    form p {
+        font-size: 3rem;
+    }
+    form span {
+        font-size: 1.7rem;
+    }
+    form .btn-form{
+        font-size: 1.7rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 330px) {
+    form .inputs{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
