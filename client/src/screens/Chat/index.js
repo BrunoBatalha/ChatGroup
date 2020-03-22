@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 import perfil from '../../static/img/background.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaughBeam, faComment, faCommentDots } from '@fortawesome/free-regular-svg-icons';
-import { faBackspace } from '@fortawesome/free-solid-svg-icons';
+import { faLaughBeam, faComment } from '@fortawesome/free-regular-svg-icons';
+import { faTimes,faPlus } from '@fortawesome/free-solid-svg-icons';
 import GroupList from '../../components/GroupList';
 import Conversation from '../../components/Conversation';
 import NewGroup from '../../components/NewGroup';
@@ -48,6 +48,11 @@ export default function Chat() {
     const [showGroups, setShowGroup] = useState(true);
     const [showModal, setShowModal] = useState(true);
 
+    useEffect(()=>{
+        const divConversation = document.querySelector('.container-conversation');
+        divConversation.scrollTop =  divConversation.scrollHeight
+    },[])
+
     function toggleGroup() {
         setShowGroup(!showGroups);
         const logoGroups = document.querySelector('.list-groups');
@@ -77,9 +82,9 @@ export default function Chat() {
 
                     <button className='btn-add-group' onClick={toggleModal}>
                         {(showModal) ?
-                            <FontAwesomeIcon icon={faCommentDots} />
+                            <FontAwesomeIcon icon={faPlus} />
                             :
-                            <FontAwesomeIcon icon={faBackspace} />
+                            <FontAwesomeIcon icon={faTimes} />
                         }
                     </button>
 
