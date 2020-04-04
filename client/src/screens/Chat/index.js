@@ -104,6 +104,14 @@ export default function Chat() {
         <div className='container-general'>
 
             <aside className='container-dashboard'>
+                <div className='logout'>
+                    <ul>
+                        <li>Conta</li>
+                        <li>
+                            <button onClick={logout}>Sair da conta</button>
+                        </li>
+                    </ul>
+                </div>
                 <div className='profile'>
                     <div className='container-profile'>
                         <button className='container-logout' onClick={configAccount}>
@@ -116,14 +124,7 @@ export default function Chat() {
                                 <FontAwesomeIcon icon={faUserCircle} />
                             </div>
                         </button>
-                        <div className='logout'>
-                            <ul>
-                                <li>Conta</li>
-                                <li>
-                                    <button onClick={logout}>Sair da conta</button>
-                                </li>
-                            </ul>
-                        </div>
+
 
                         <div className='datas'>
                             <p>{username}</p>

@@ -240,6 +240,7 @@ button.container-logout div .circle {
 
 .logout {
     display: none;
+    z-index: 111;
     background: white;    
     border-radius: 5px;
     border-top-left-radius: 0px;
