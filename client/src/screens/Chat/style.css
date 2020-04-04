@@ -20,16 +20,27 @@
     background-color: #eeeeee;
 }
 
+.container-dashboard .profile .container-profile {
+    display: flex;
+    flex-direction: row
+}
+
 .container-dashboard .profile .datas {
-    font-size: 1rem;
-    margin: 5px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center
 }
 
 .container-dashboard .profile .btn-add-group {
     background: transparent;
     border: none;
     font-size: 1.2rem;
-    color: #646464
+    color: #646464;
+    width: 30px
+}
+
+.container-dashboard .profile .btn-add-group svg:hover {
+    cursor: pointer
 }
 
 .container-chat .info-group {
@@ -44,6 +55,7 @@
 }
 
 .container-chat .info-group .text-group {
+    font-size: 1rem;
     padding: 0px 15px;
 }
 
@@ -55,8 +67,8 @@
     padding: 0 10px;
     bottom: 0px;
     height: 85px;
-    width: 100%;
-    background-color: #eeedeb;
+    width: 80%;
+    background-color: transparent;
 }
 
 .container-chat .container-input i {
@@ -79,7 +91,7 @@
     color: var(--cinza-escuro);
     height: 50px;
     font-size: 18px;
-    width: 65%;
+    width: 90%;
     padding: 0px 10px;
     border: none;
     border-radius: 5px;
@@ -111,8 +123,8 @@
     flex-direction: collumn;
     justify-content: center;
     line-height: 1.2rem;
-    margin-top: 20px;
-    color: #cecece
+    color: #cecece;
+    height: 50px;
 }
 
 .logo-list i {
@@ -132,12 +144,168 @@
     overflow: hidden;
 }
 
+.container-profile .img-round {
+    margin-right: 5px;
+}
+
+.container-profile .img-round:hover {
+    cursor: pointer;
+}
+
+.container-profile .img-round:active, .container-profile .img-round:focus {
+    outline: none
+}
+
+button.container-logout {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    margin-right: 5px;
+    transition: opacity .2s
+}
+
+button.container-logout:hover {
+    opacity: .5;
+}
+
+button.container-logout:active {
+    border-bottom: 2px solid black;
+}
+
+button.container-logout:focus {
+    outline: none
+}
+
+button.container-logout div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px
+}
+
+button.container-logout div .circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #9b9a98;
+    margin: 3px
+}
+
+.img-round svg {
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container-input .btn-send {
+    background: white;
+    font-size: 20px;
+    margin-left: 4px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity .2s
+}
+
+.container-input .btn-send:hover {
+    opacity: .8
+}
+
+.container-input .btn-send svg {
+    position: relative;
+    top: 10px
+}
+
+.container-input .btn-send:hover {
+    cursor: pointer;
+}
+
+.container-input .btn-send:active {
+    border: .5px solid rgb(139, 139, 139)
+}
+
+.form-send {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 20px;
+    width: 90%;
+}
+
+.logout {
+    display: none;
+    background: white;    
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    padding: 10px;
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    height: 90px;
+    width: 200px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.logout ul li {
+    list-style-type: none;
+}
+
+.logout ul li:nth-child(1) {
+    border-bottom: 1px solid #cecece;
+    font-size: 20px;
+}
+
+.logout ul li button {
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.logout ul li button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.logout ul li button:focus {
+    outline: none;
+}
+
+.logout ul li button:active {
+    opacity: .5;
+}
+
 @media (max-width: 1255px) {
     .container-general {
         display: block;
     }
     .container-general .container-dashboard {
         height: 50px;
+    }
+    .container-chat .container-input {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 10px;
+        bottom: 0px;
+        height: 85px;
+        width: 100%;
+        background-color: transparent;
+    }
+    .form-send {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 20px;
+        width: 100%;
     }
     .toggle-groups {
         display: block;

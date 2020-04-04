@@ -12,11 +12,14 @@
     display: grid;
     grid-template-columns: 15% 85%;
     align-items: center;
+    margin-top:2px;
+    margin-bottom: 2px;
 }
 .list-groups ul li .container-img{
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    margin-top:-1px;
 }
 
 ul li .btn-group {
@@ -29,12 +32,15 @@ ul li .btn-group {
     transition: background .2s;
     font-weight: inherit;
     font-size: 18px;
+    padding-left: 10px;
 }
 
 ul li .btn-group:hover {
     background: var(--cinza-claro);
     transition: background .2s;
     cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5x;
 }
 
 ul li .btn-group:active {
@@ -46,6 +52,13 @@ ul li .btn-group:active {
 
 ul li .btn-group:focus-within {
     outline: none;
+}
+
+.choose-group{
+    background: #a7a6a6;
+    border-radius: 5px;
+    transition-property: border-radius, background;
+    transition-duration: .2s;
 }
 
 @media (max-width: 1255px) {

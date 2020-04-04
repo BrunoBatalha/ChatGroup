@@ -1,4 +1,4 @@
-form {
+.form-style {
     width: 75%;
     display: block;
     margin: 0px 200px 0px 10px;
@@ -7,44 +7,37 @@ form {
     color: var(--cinza-escuro);
     border-radius: 5px;
 }
-
-form p {
+.form-style p {
     text-transform: uppercase;
     font-size: 2rem;
     text-align: center;
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
-
-form span {
+.form-style span {
     display: block;
     text-align: center;
     font-size: 1rem;
     color: #363636;
     text-decoration: none
 }
-
-form span:hover {
+.form-style span:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-
-form .inputs {
+.form-style .inputs {
     padding: 15px 20px;
     margin: 0px 30px;
 }
-
-form .input-block~.input-block {
+.form-style .input-block~.input-block {
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
-form input[type=checkbox] {
+.form-style input[type=checkbox] {
     margin-bottom: 30px;
     margin-right: 5px;
 }
-
-form .btn-form {
+.form-style .btn-form {
     color: #fff;
     width: 150px;
     height: 2.4rem;
@@ -59,8 +52,7 @@ form .btn-form {
     margin: 0px auto 20px auto;
     transition: background-color .2s
 }
-
-form .btn-form:hover {
+.form-style .btn-form:hover {
     background-color: var(--cinza-mais-escuro);
     cursor: pointer;
     border: none;
@@ -68,23 +60,23 @@ form .btn-form:hover {
 }
 
 @media (min-width: 1500px) {
-    form .inputs{
+.form-style .inputs{
         font-size: 1.9rem;
     }
-    form p {
+.form-style p {
         font-size: 3rem;
     }
-    form span {
+.form-style span {
         font-size: 1.7rem;
     }
-    form .btn-form{
+.form-style .btn-form{
         font-size: 1.7rem;
         height: 3rem;
     }
 }
 
 @media (max-width: 360px) {
-    form .inputs{
+.form-style .inputs{
         padding-left: 0;
         padding-right: 0;
     }
