@@ -5,6 +5,12 @@ Site desenvolvido utilizando:
 **Back-end:** NodeJs, Express, Mongoose, Socket.io\
 **Banco de dados:** MongoDB
 
+## Gifs
+**Parte 1**\
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/33035221/82134042-f64d5680-97c0-11ea-8cef-10d36257955a.gif)
+
+**Parte 2**\
+![ezgif com-video-to-gif(1)](https://user-images.githubusercontent.com/33035221/82134087-a622c400-97c1-11ea-8a2c-fc7046c854f7.gif)
 
 ## Meu objetivo com isso
 Aprender como funciona um sistema em tempo real. 
