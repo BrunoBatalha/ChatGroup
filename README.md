@@ -12,7 +12,7 @@ Site desenvolvido utilizando:
 **Parte 2**\
 ![ezgif com-video-to-gif(1)](https://user-images.githubusercontent.com/33035221/82134087-a622c400-97c1-11ea-8a2c-fc7046c854f7.gif)
 
-## Meu objetivo com isso
+## Meu objetivo
 Aprender como funciona um sistema em tempo real. 
 
 ## Como funciona?
