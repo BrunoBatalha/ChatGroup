@@ -1,7 +1,7 @@
 # ChatGroup
 
 Site desenvolvido utilizando:
->**Front-end:** ReactJs, Socket.io-client\
+>**Front-end:** ReactJs, Axios, Socket.io-client\
 **Back-end:** NodeJs, Express, Mongoose, Socket.io\
 **Banco de dados:** MongoDB
 
